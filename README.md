@@ -1,82 +1,58 @@
-在终端上演示《传送门》片尾曲效果的 Python 脚本程序。
+# Проект, который запускает песню "Still Alive" из Portal 1 с помощью Python внутри вашего terminal-а на любом компьютере
 
-## 使用条件
+## Зависимости
+* Python 3
+* Pip 3
+* Terminal or Terminal Emulator(Windows-пользователи)
+* Сool-retro-term
 
-`still_alive_credit.py` 脚本使用 Python 3，以下提到的 `pip` 多数情况下对应 `pip3` 命令
-以调用 Python 3 的 `pip` 组件。
+## Установка скрипта
+* Клонировать репозиторий: `git clone https://github.com/LaggerIsME/Still_Alive_from_Portal_In_Linux_Terminal`
+* Установить pip с помощью команды:
+  * Ubuntu/Debian: `sudo apt install python3-pip`
+  * Fedora: `sudo dnf install python3-pip`
+  * Arch: `sudo pacman -S python-pip`
+  * Остальные дистрибутивы: `ну, вы как-нибудь сами ребят...`
+* Установить зависимость скрипта с помощью команды: `pip install playsound`
 
-Windows 下需要使用 Windows terminal，MinTTY 等支持 ANSI 终端转义序列的终端模拟器。
+## Установка ретро-терминала
+* Установить cool-retro-term с помощью команды:
+  * Ubuntu/Debian: `sudo apt install cool-retro-term`
+  * Fedora: `sudo dnf install cool-retro-term`
+  * Arch: `sudo pacman -S cool-retro-term`
+  * Остальные дистрибутивы: `ну, вы как-нибудь сами ребят...`
 
-为了播放音乐，需要用 `pip` 安装 `playsound`。`playground` 在 Linux 下依赖 
-`python-gobject` 软件包（Ubuntu 已默认安装）。在 MacOS 下还需要用 `pip` 安装 `PyObjC`。
+## Настройка ретро-терминала
+### Откройте cool-retro-term через свой DE или пропишите в терминале: `cool-retro-term`
+![](step1.jpg)
+### Нажмите правой кнопкой мыши на приложение > View > FullScreen
+![](step2.jpg)
+### Нажмите правой кнопкой мыши на приложение > Settings
+![](step3.jpg)
+### Поставьте такие же настройки, как на скриншотах ниже 
+![](step4.jpg)
+![](step5.jpg)
+![](step6.jpg)
+### Закройте Settings и сделайте следующие действия:
+* Перейдите в директорию со скриптом с помощью вашего ретро-терминала: `cd ~/Still_Alive_from_Portal_In_Linux_Terminal`
+* Запустите скрипт с помощью команды: `python still_alive_credit.py`
 
-## 使用方法
+## Параметры запуска
 
-在当前目录下执行：
-
-```
-python3 still_alive_credit.py
-```
-
-脚本会读取 `TERM`，`COLUMNS` 和 `LINES` 环境变量来调整输出区域大小并决定是否启用终端颜色等
-特性。如果希望在一台标准 VT100 终端上演示，应该运行：
-
-```
-TERM=vt100 python3 still_alive_credit.py
-```
-
-可以使用 `--no-sound` 参数不带音乐进行演示，此时脚本只依赖 Python 标准库：
-
-```
-python3 still_alive_credit.py --no-sound
-```
-
----
-
-A demo of the credit song 'Still Alive' of Portal 1 written in Python, running
-in text terminal.
-
-## Dependency
-
-`still_alive_credit.py` is written with Python 3. In most cases the following
-`pip` should be `pip3` command.
-
-In Windows system, you need a teminal emulator supporting ANSI escape sequences
-like Windows Terminal, MinTTY, Cmder or ConEmu。
-
-For playing music, you need install `playsound` with `pip`. In Linux `playsound`
-depends on `python-gobject` (default installed in Ubuntu). In MacOS you also need
-to use `pip` to install `PyObjC`.
-
-## Usage
-
-In current directory, execute:
+Запустить со звуком:
 
 ```
 python3 still_alive_credit.py
 ```
 
-The script will read environment variable `TERM`, `COLUMNS` and `LINES` to determine
-the output area size and whether to enable features such as terminal color. If you
-want run it on a standard VT100 terminal, you should execute:
-
-```
-TERM=vt100 python3 still_alive_credit.py
-```
-
-It's able to use `--no-sound` option to run the script without playing sound. In this
-case, the script only depends on Python standard library:
+Запустить без звука:
 
 ```
 python3 still_alive_credit.py --no-sound
 ```
 
-## Linux 运行效果 / Snapshot on Linux
+## Пример, как все выглядит в терминале
 
 ![](still_alive_linux.jpg)
 
-## 演示视频 / demonstration video
-
-![](still_alive_informer213.jpg)
-
-<https://www.bilibili.com/video/BV1cU4y1A7ud>
+### Приятного вам наслаждения музыкой в терминале!
